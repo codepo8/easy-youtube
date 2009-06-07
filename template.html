@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 1//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="easyplayerstyle.css" type="text/css" charset="utf-8">
+    <title>Template</title>
+  </head>
+  <body>
+    <script>
+      /*
+        This is the configuration of the player. Most likely you will
+        never have to change anything here, but it is good to be able 
+        to, isn't it? 
+      */
+      config = {
+        CSS:{
+          /* 
+            IDs used in the document. The script will get access to 
+            the different elements of the player with these IDs, so 
+            if you change them in the HTML below, make sure to also 
+            change the name here!
+          */
+          IDs:{
+            container:'eytp-maincontainer',
+            canvas:'eytp-playercanvas',
+            player:'eytp-player',
+            controls:'eytp-controls',
+
+            volumeField:'eytp-volume',
+            volumeBar:'eytp-volumebar',
+
+            playerForm:'eytp-playerform',
+            urlField:'eytp-url',
+
+            sizeControl:'eytp-sizecontrol',
+
+            searchField:'eytp-searchfield',
+            searchForm:'eytp-search',
+            searchOutput:'eytp-searchoutput'
+            /* 
+              Notice there should never be a comma after the last 
+              entry in the list as otherwise MSIE will throw  a fit!
+            */
+          },
+          /*
+            These are the names of the CSS classes, the player adds
+            dynamically to thevolume bar in certain 
+            situations.
+          */
+          classes:{
+            maxvolume:'maxed',
+            disabled:'disabled'
+            /* 
+              Notice there should never be a comma after the last 
+              entry in the list as otherwise MSIE will throw  a fit!
+            */
+          }
+        },
+        /* 
+          That is the end of the CSS definitions, from here on 
+          you can change settings of the player itself. 
+        */
+        application:{
+          /*
+            The YouTube API base URL. This changed during development og this,
+            so I thought it useful to make it a parameter.
+          */
+          youtubeAPI:'http://gdata.youtube.com/apiplayer/cl.swf',
+          /* 
+            The YouTube Developer key,
+            please replace this with your own when you host the player!!!!!
+          */
+devkey:'AI39si7dmjt7Gz5bxQDPPdAe2mGPHQvSeFoa1VCM1UGS_DtW-fefNMBeJrl320yAHeAWBycKC4S5NizkuIRiVwgUITUY9fu_cQ',
+          /*
+            The volume increase/decrease in percent and the volume message 
+            shown in a hidden form field (for screen readers). The $x in the 
+            message will be replaced with the real value.
+          */
+          volumeChange:10,
+          volumeMessage:'volume $x percent',
+          /*
+            Amount of search results and the error message should there 
+            be no reults.
+          */
+          searchResults:6,
+          loadingMessage:'Searching, please wait',
+          noVideosFoundMessage:'No videos found :(',
+          /*
+            Amount of seconds to repeat when the user hits the rewind 
+            button.
+          */
+          secondsToRepeat:10,
+          /*
+            Movie dimensions.
+          */
+          movieWidth:400,
+          movieHeight:300
+          /* 
+            Notice there should never be a comma after the last 
+            entry in the list as otherwise MSIE will throw  a fit!
+          */
+        }  
+      }
+    </script>
+    <!-- start player -->
+    <div id="eytp-maincontainer">
+      <form id="eytp-playerform" action="">
+        <div id="eytp-addressbar">
+          <label for="eytp-url">YouTube Address:</label>
+          <input type="text" id="eytp-url"/>
+          <input type="submit" value="Load"/>
+          <p>You can go to the YouTube video you want to watch and copy and paste the address at the top into this box.</p>
+        </div>
+        <h2 id="eytp-controlheading">Player Controls</h2>
+        <ul id="eytp-controls">
+          <li>
+            <input id="eytp-play" type="image" src="0.gif" width="60" height="60" alt="Play">
+          </li>
+          <li>
+            <input id="eytp-repeat" type="image" src="0.gif" width="60" height="60" alt="Repeat">
+            </a>
+          </li>
+          <li>
+            <input id="eytp-pause" type="image" src="0.gif" width="60" height="60" alt="Pause">
+          </li>
+          <li>
+            <input id="eytp-stop" type="image" src="0.gif" width="60" height="60" alt="Stop">
+          </li>
+          <li>
+            <input id="eytp-louder" type="image" src="0.gif" width="60" height="60" alt="Louder">
+          </li>
+          <li>
+            <input id="eytp-quieter" type="image" src="0.gif" width="60" height="60" alt="Quieter">
+          </li>
+          <li>
+            <input id="eytp-mute" type="image" src="0.gif" width="60" height="60" alt="Mute">
+          </li>
+        </ul>
+        <div id="eytp-playercanvas">
+          <div id="eytp-player">
+            Please wait, I am setting up your player...
+          </div>
+          <p id="eytp-volumecontrol">
+            <label for="eytp-volume">Volume</label>
+            <input type="text" id="eytp-volume" readonly="readonly">
+            <div id="eytp-volumebar"></div>
+          </p>
+          <div id="eytp-sizecontrol">
+            Video Size
+            <ul>
+              <li><input type="button" id="eytp-zoom100" value="Small"></li>
+              <li><input type="button" id="eytp-zoom150" value="Medium"></li>
+              <li><input type="button" id="eytp-zoom200" value="Large"></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+      <div id="eytp-playlist">
+        <form id="eytp-search" action="" action="post">
+          <p>Use this box to search for videos on YouTube you are interested in, or choose a video from your playlist.</p>
+          <p><label for="eytp-searchfield">Search</label>
+          <input type="text" name="eytp-searchfield" id="eytp-searchfield">
+          <input type="submit" value="Go" id="eytp-searchsubmit"></p>
+        </form>
+        <h2>Search Results / Your Playlist</h2>
+        <ul id="eytp-searchoutput">
+          <li><a href="">No playlist items</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- end player -->
+  </body>
+</html>
+  

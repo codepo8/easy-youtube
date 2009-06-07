@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Easy YouTube Player documentation</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../reset-fonts-grids.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="base.css" type="text/css"charset="utf-8">
+    <link rel="stylesheet" href="tutorial.css" type="text/css" charset="utf-8">
+  </head>
+  <body>
+  <div id="doc">
+    <div id="hd">
+      <h1>Easy YouTube Player documentation</h1>
+    </div>
+    <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b" id="content">
+<p>The Easy YouTube Player is an alternative way of watching YouTube videos. Instead of simulating YouTube we wanted to make sure that everybody who wants to see videos on-line can do so - regardless of age, ability and web proficiency.</p>
+    <p>Here you'll find information on how to use, host and change the Easy YouTube Player. Please choose what you want to know:</p>
+    <ul id="toc">
+      <li><a href="#using">Watching Videos</a>
+        <ul>
+          <li><a href="#loading">Loading a video</a></li>
+          <li><a href="#bookmarklet">Using a bookmarklet</a></li>
+          <li><a href="#searching">Searching for a video</a></li>
+
+          <li><a href="#playing">Playing the video</a></li>
+          <li><a href="#volume">Changing the volume</a></li>
+        </ul>
+      </li>
+      <li><a href="#urloptions">Preselecting movies and playlists (API)</a></li>
+      <li><a href="#hosting">Hosting the player yourself</a></li>
+      <li><a href="#changing">Changing the player</a>
+        <ul>
+          <li><a href="#look">Changing the look and feel</a></li>
+          <li><a href="#parameter">Defining player parameters</a></li>
+          <li><a href="#html">Changing the interface and structure</a></li>
+        </ul>
+      </li>
+      <li><a href="#credits">Credits and thank you</a></li>
+    </ul>
+    
+    <h2 id="using">Watching videos</h2>
+    
+    <p>There are several ways to watch a video in the Easy YouTube Player. You can enter a YouTube address, use a bookmarklet or search for a video.</p>
+
+    <h3 id="loading">Loading a video</h3>
+    
+    <p>All you have to do to load a video in the Easy YouTube Player is to have a valid YouTube address in the address bar and click the load button (or hit the enter key on your keyboard). The player will then load the video and show it below the address bar. Once the video has been found, you'll see a preview picture of it with a play button in its middle - just like you do on the real YouTube. Figure 1 shows the address bar of the player with the load button.</p>
+
+    <div class="caption">
+      <img src="locationbar.png" alt="the location bar of the youtube player">
+      <p class="caption-title"><strong>Figure 1:</strong> All you need to do to load a video into the player is to enter a YouTube address and hit the "load" button.</p>
+    </div>
+
+    <h3 id="bookmarklet">Using a bookmarklet</h3>
+    <p>Bookmarklets are small JavaScripts that you can bookmark and add to your links toolbar in MSIE or bookmarks toolbar in Firefox. If you drag the following link on your toolbar or bookmark it, hitting that bookmark on any YouTube page will open up the video in the Easy YouTube Player:</p>
+
+    <p id="bookmarkletlink"><a href="javascript:x = window.location.href;window.location.href='http://icant.co.uk/easy-youtube/?'+x;">Easy YouTube</a></p>
+
+    <h3 id="searching">Searching for a video</h3>
+    
+    <p>Searching for a video on YouTube is as easy as entering what you search for in the field on the right and hitting the "go" button (or hit enter on the keyboard). The search results will show up below the search box under the "Search Results / Your Playlist" headline. Figure 2 shows what that may look like for the search term "robot  ":</p>
+    
+    <div class="caption">
+      <img src="search.png" alt="The search panel with a search and results in a list">
+      <p class="caption-title"><strong>Figure 2:</strong> Searching for a term will show the results below the box in a list.</p>
+    </div>
+    
+    <h3 id="playing">Playing the video</h3>
+
+    <p>If you can see a picture of the video, you can start watching it. Once this appears you can hit the play button (the one with a triangle) to play the video. It might be that YouTube needs to load the video a bit more before playing it (this is called buffering). If this happens there'll be a spinning wheel in the middle of the video.</p>
+    <p>If you want to repeat the last few seconds to see them again or if you missed something you can hit the back button (the one with two triangles).</p>
+    <p>If you want to pause the video, hit the pause button (the one with two rectangles on it). This is a toggle, so activating it again will resume the video. Hitting the stop button (the one with the big square) will stop the movie. Figure 3 shows all of the play controls: </p>
+
+    <div class="caption">
+      <img src="playcontrols.png" width="323" height="109" alt="The play controls of the Easy YouTube player">
+      <p class="caption-title"><strong>Figure 3:</strong> These controls allow you to change how a video is played. The first one plays the video, the second one repeats the last few seconds, the third one pauses and resumes videos</p>
+    </div>
+
+    <h3 id="size">Changing size</h3>
+    
+    <p>The "Video Size" control allows you to choose a different size of video. There are three sizes available and all you need to do to choose a different one is activate the size you want.</p>
+    <p>The player will re-size with the video, which means that the search bar might move below the movie if there is not enough space. If that happens, simply choose the normal size again to get the original layout.</p>
+
+    <div class="caption">
+      <img src="zoomcontrols.png" alt="The size controls of the Easy YouTube Player">
+      <p class="caption-title"><strong>Figure 4:</strong> You can select three sizes of video: small, medium and large by pressing the appropriate buttons.</p>
+    </div>
+
+    <h3 id="volume">Changing volume</h3>
+
+    <p>You can change the volume of the video by pressing the appropriate buttons. The one showing a speaker with several sound-waves increases the volume, the one with one soundwave decreases it. The button with the crossed out speaker mutes the player. The mute button is a toggle, so you can press it to mute the video and press it again to unmute it. Figure 5 shows the controls for the volume:</p>
+
+    <div class="caption">
+      <img src="volumecontrols.png" alt="The volume controls of the Easy YouTube Player">
+      <p class="caption-title"><strong>Figure 5:</strong> These controls change the volume of the video, from left to right: increase Volume, decrease volume and mute.</p>
+    </div>
+    
+    <p>You can change the volume regardless of the movie playing and any change in volume will decrease or increase the size of the volume bar. If you mute the player, the bar turns grey and when you are already at the maximum value and you try to increase it'll turn red. Figure 6 shows the different states of the volume bar.</p>
+    
+    <div class="caption">
+      <img src="volume.png" alt="Different states of the volume bar">
+      <p class="caption-title"><strong>Figure 6:</strong> The volume bar has different states. From minimum to maximum volume it is blue, when you try to make it louder whilst being at maximum it turns red and when the player is muted it turns grey.</p>
+    </div>
+
+    <h2 id="urloptions">Preselecting movies and playlists</h2>
+    
+    <p>One of the things we considered of high importance was to enable users to pre-select movies to be automatically loaded when the player is called up. This is why we allow you to play with the URL of the player.</p>
+<pre><code><a href="http://icant.co.uk/easy-youtube/">http://icant.co.uk/easy-youtube/</a></code></pre>   
+    <p>Shows the player without any movie loaded, empty search fields and playlists.</p>
+<pre><code><a href="http://icant.co.uk/easy-youtube/?http://www.youtube.com/watch?v=9i0-btCTdN8">http://icant.co.uk/easy-youtube/?http://www.youtube.com/watch?v=9i0-btCTdN8</a></code></pre>
+    <p>Pre-loads the video of this YouTube address and shows the preview image in the player.</p>
+    <pre><code><a href="http://icant.co.uk/easy-youtube/?search=panda">http://icant.co.uk/easy-youtube/?search=panda</a></code></pre>
+    <p>Performs a search on YouTube for the term panda and shows links to the videos in the playlist on the right. You can use more than one search word by adding them with a "+". For example:</p>
+    <pre><code><a href="http://icant.co.uk/easy-youtube/?search=red+panda">http://icant.co.uk/easy-youtube/?search=red+panda
+</a></code></pre>
+    <p>One last option you have is to bookmark certain videos on <a href="http://del.icio.us">del.icio.us</a> and tag them for a user. In order to show these videos as a playlist you need to provide your user name and the tag separated by a dash. For example my user name on del.icio.us is "codepo8" and I bookmarked some videos with the tag "easyyoutubeplayer". The following link will show them all in the playlist:</p>
+<pre><code><a href="http://icant.co.uk/easy-youtube/?tag=codepo8-foreasyyoutubeplayer">http://icant.co.uk/easy-youtube/?tag=codepo8-foreasyyoutubeplayer</a></code></pre>
+    <p>You can mix and match the different options. If you for example want to show a video and perform a search for other videos you can use:</p>
+    <pre><code><a href="http://icant.co.uk/easy-youtube/?http://www.youtube.com/watch?v=3UgpfSp2t6k&search=accents">http://icant.co.uk/easy-youtube/?http://www.youtube.com/watch?v=3UgpfSp2t6k&search=accents</a></code></pre>
+
+    <h2 id="hosting">Hosting the player yourself</h2>
+    
+    <p>Hosting the player on your own servers is as easy as creating a new folder and unpacking the zip of the player into that one. Notice that you can not run the player on the file system, it needs to be on a server and called via http!</p>
+    <p>We tried to keep the player as resource-independent as possible - all you need to do if you host the player yourself is to <a href="http://code.google.com/apis/youtube/overview.html">get your own developer key from Google</a> and replace the one in the template with your own:</p>
+
+<pre><code>
+<del>devkey:'AI39si7dmjt7Gz5bxQDPPdAe2mGPHQvSeFoa1VCM1UGS_DtW-fefNMBeJrl320yAHeAWBycKC4S5NizkuIRiVwgUITUY9fu_cQ',</del>  
+<ins>devkey:'your-developer-key-from-google',</ins>  
+</code></pre>    
+    
+    <p>Please get your own key as Google might deactivate this one when several IPs use it.</p>
+    <p>If you are anticipating a lot of traffic, please contact me, as you'd also need to clone the Yahoo! Pipe I am using to search for videos.</p>
+    
+    <h2 id="changing">Changing the player</h2>
+    
+    <p>One of the main reasons for the full re-write of the player from version 1.5 to 2 was to make it easier for you to change the player. Now all the look and feel of the player is CSS-driven and both the interface and player parameters are in the same template file. This means you'll never have to change the player code itself to customize it for your needs.</p>
+
+    <h3 id="look">Changing the look and feel</h3>
+
+    <p>All the look and feel of the player is defined in the <code>easyplayerstyle.css</code> file. The player as a whole does not interfere with this look and feel but there are some exceptions:</p>
+    <ul>
+      <li>The volume control bar gets a class called "<code>maxed</code>" when the volume is already the maximum and a class called "<code>disabled</code>" when the player is muted.</li>
+      <li>The width of the main player is altered when you zoom the video. This is done programatically in the JavaScript and we have no way around that.</li>
+    </ul>
+
+    <h3 id="parameter">Defining player parameters</h3>
+    
+    <p>You can change the names of these classes and the player parameters in the <code>script</code> section of the template. There you'll find a configuration object that allows you to change everything in the player, heavily documented. Most likely you will never ever have to change that.</p>
+
+<pre><code id="configexample"></code></pre>
+
+    <h3 id="html">Changing the interface and structure</h3>
+ 
+    <p>The whole player is driven by a single HTML template <code>template.html</code> and you can change the structure, translate the labels and remove functionality in any way you like. The HTML of the player itself is in between the <code>&lt;!-- start player --&gt;</code> and <code>&lt;!-- end player --&gt;</code> comments.</p>
+    <p>Notice that any change in the IDs of elements should be reflected in the IDs section of the configuration mentioned earlier, as this is how the player finds these elements.</p>
+    <p>Another thing that should not be changed are the IDs of any of the buttons as this defines the action of the button (this refers to the zoom control and the player control buttons).</p>
+ 
+<pre><code id="playerexample"></code></pre>
+
+    <h2 id="credits">Credits and thank you</h2>
+    
+    <p>All the code, visuals (for what they're worth) and documentation by <a href="http://wait-till-i.com">Christian Heilmann</a>.</p>
+    
+    <p>A big thank you must go to Antonia Hyde who demanded a player like this in the first place in <a href="http://www.slideshare.net/hi.antonia/rich-media-and-web-apps-for-people-with-learning-disabilities">her talk at the Accessibility2.0 conference</a> in London and helped with initial testing and wording of labels.</p>
+    <p>Many thanks to <a href="http://isolani.co.uk">Mike Davies</a> and Ben Hawkes-Lewis who gave immediate feedback in the office about the idea and the prototype.</p>
+    <p>A lot of inspiration came from all the people who <a href="http://www.wait-till-i.com/2008/05/27/making-youtube-easier-and-more-accessible/">commented on the blog</a> about the various iterations of the player, so thank you to all of these people, too.</p>
+    <p>Last but not least I want to thank everybody involved in the YouTube API, swfObject/UFO, Yahoo Pipes and the del.icio.us API. Without these, this would have never happened.</p>
+  </div>
+</div>
+</div>
+<div id="ft">
+  <p>&copy; Christian Heilmann 2008, licensed using the <a href="http://wait-till-i.com/license.txt">BSD license</a>.</p>
+</div>
+</div>
+<script type="text/javascript" charset="utf-8" src="codeviewer.js"></script>
+  </body>
+</html>

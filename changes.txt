@@ -1,0 +1,20 @@
+Changes 12/06/08
+
+* complete re-write of code
+* new buttons - glass were too complex
+* added video size control
+* added search and playlist support
+* added address field to send to friends
+* player now template driven - no more changes in main code needed
+* added documentation
+* added RESTful interface
+
+Changes 28/05/08
+
+* moved buttons to the bottom of the player
+* text is now below the buttons and has an invisible extra "use this button to " text for screen readers
+* pause button now toggles pause/play
+* the URL of the buttons is not an anchor but a url now (that goes nowhere, but this is just to read out the right command)
+* removed the "current highlight" state 
+* added a volume level indicator (as a visual bar and a hidden form field)
+* I didn't change the button rollover states (lighter colour than the current one)- it is an image, would anyone volunteer to paint nicer ones?

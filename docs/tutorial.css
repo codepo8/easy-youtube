@@ -1,0 +1,133 @@
+body{
+  background:#eee;
+  padding:2em 0;
+}
+#content{
+  padding:1em 2em;
+  font-size:120%;
+  line-height:1.3em;
+}
+#hd{
+  background:url(back.png);
+}
+#sidebar ul{
+  background:#363;
+  color:#fff;
+  margin:0;
+  padding:.5em 2em;
+}
+h1,h2,h3,h4,h5{
+  font-family:"Lucida Grande","gill sans",helvetica,arial;
+  color:#060;
+}
+.caption{
+  border:1px solid #ccc;
+  padding:5px;
+  margin:5px;
+}
+.caption img{
+  display:block;
+  margin:10px;
+}
+p#bookmarkletlink a{
+  width:10em;
+  text-align:center;
+  font-weight:bold;
+  text-decoration:none;
+  text-transform:uppercase;
+  padding:1em .5em;
+  border:2px solid #000;
+  background:#063;
+  color:#fff;
+  display:block;
+  margin:1em auto;
+}
+#toc{
+  margin:1em 2em;
+  background:url(screenshot.png) 100% 10% no-repeat;
+}
+a:link{
+  color:#063;
+  padding:.2em;
+} 
+a:visited{
+  color:#333;
+} 
+a:hover,a:active{
+  background:#063;
+  color:#fff;
+} 
+#toc ul {
+  color:#999;
+  margin:.5em 0 0 1em;
+}
+#toc li{
+  list-style:square;
+  padding:.2em 0;
+}
+#bd{
+    background:url(backline.png) top left repeat-y;
+}
+#ft{
+    background:url(back.png) bottom left no-repeat;
+    text-align:center;
+    padding:.5em;
+    padding-bottom:2em;
+    margin-bottom:1em;
+}
+#ft p{
+    border-top:1px solid #ccc;
+    margin:.5em 2em;
+    padding-top:.5em;
+}
+table{overflow:auto;}
+h1{
+  margin:0;
+  padding:1em;
+  text-align:center;
+  font-size:160%;
+}
+
+#doc2 a{
+  color:#036;
+}
+#sidebar li{
+  
+  list-style:square;
+  color:#fff;
+  padding:.5em 0;
+}
+#sidebar li a{
+  color:#fff;
+  text-decoration:none;
+  font-size:117%;
+}
+#sidebar li a:hover{
+  text-decoration:underline;
+}
+pre ol{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+pre{
+  border:1px solid #999;
+  background:#eee;
+  width:90%;
+  padding:3%;
+  overflow:auto;
+}
+pre ol li span{
+  color:#666;
+  font-weight:bold;
+}
+pre ol li{
+  list-style:none;
+  padding:.1em 0;
+}
+pre ol li.highlight{
+  background:#0c0;
+}
+pre ol li.highlight span{
+  color:#000;
+}
